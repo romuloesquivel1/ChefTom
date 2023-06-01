@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #808080;
+    padding: 10px;
+}
+
+.navbar-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}
+
+.navbar-item a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.website-content {
+font-family: 'Montserrat', sans-serif;
+}
+
+.website-headings, meal-name {
+    font-family: 'Mr Dafoe', cursive;
+}

@@ -1,0 +1,108 @@
+<h1 class='website-headings'>Menu</h1>
+
+<div class="menu-content">
+<p class='website-content'>Our menu is a reflection of Chef Tom's passion for creating exquisite dishes that combine flavors, textures, and presentation to deliver an unforgettable dining experience.
+<br>
+<br>
+At Chef Tom's, we take pride in offering a diverse selection of dishes inspired by global cuisine, curated with the finest ingredients and expert culinary techniques. Whether you're a fan of indulgent starters, savory main courses, tantalizing chef specials, delectable desserts, or wholesome vegetarian options, our menu has something to satisfy every palate.
+<br>
+<br>
+If you're feeling adventurous (brave), delve into our Chef Specials, where Chef Tom showcases his creativity and mastery. Indulge in the 'Truffle-infused Lobster Risotto,' a luxurious dish combining succulent lobster meat with creamy Arborio rice and the earthy aroma of truffles.
+<br>
+<br>
+For our vegetarian guests, we offer a selection of thoughtfully crafted dishes like the 'Kimchi Tofu Fried Rice,' a delightful blend of frid rice with kimchi, vegetables, and tofu', delivering a burst of flavors in every bite.
+<br>
+<br>
+Chef Tom's menu is a testament to our commitment to providing a memorable dining experience. We invite you to explore our culinary offerings and embark on a gastronomic adventure that will leave you craving for more. Bon appétit!"</p>
+</div>
+<br>
+<br>
+
+<div id="sort-dropdown">
+  <label for="sort-select">Sort by:</label>
+  <select id="sort-select">
+    <option value="all">All</option>
+    <option value="starter">Starter</option>
+    <option value="main-course">Main Course</option>
+    <option value="chef-special">Chef Special</option>
+    <option value="dessert">Dessert</option>
+    <option value="vegetarian">Vegetarian</option>
+  </select>
+    <button id="reveal-button" style="display: none;">Reveal Selected Meals</button>
+
+</div>
+
+<ul id="menu-list">
+  <!-- Meals will be dynamically populated here -->
+</ul>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuList = document.getElementById('menu-list');
+    const sortSelect = document.getElementById('sort-select');
+        const revealButton = document.getElementById('reveal-button');
+    let mealsData = [];
+
+    function renderMeals(meals) {
+      menuList.innerHTML = '';
+      meals.forEach(meal => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <h2 class='meal-name'>${meal.name}</h2>
+          <p>${meal.description}</p>
+          <p>${meal.category}</p>
+          <p>£${meal.price}</p>
+        `;
+        menuList.appendChild(listItem);
+      });
+    }
+
+    function filterMealsByCategory(selectedCategory) {
+      let filteredMeals = [];
+
+      if (selectedCategory === 'all') {
+        filteredMeals = [...mealsData].sort((a, b) => a.price - b.price);
+      } else if (selectedCategory === 'starter') {
+        filteredMeals = mealsData.filter(meal => meal.category === 'Starter');
+      } else if (selectedCategory === 'main-course') {
+        filteredMeals = mealsData.filter(meal => meal.category === 'Main Course');
+      } else if (selectedCategory === 'chef-special') {
+        filteredMeals = mealsData.filter(meal => meal.category === 'Chef Special');
+      } else if (selectedCategory === 'dessert') {
+        filteredMeals = mealsData.filter(meal => meal.category === 'Dessert');
+      } else if (selectedCategory === 'vegetarian') {
+        filteredMeals = mealsData.filter(meal => meal.category === 'Vegetarian');
+      }
+
+      renderMeals(filteredMeals);
+    }
+
+    function sortMealsByPrice() {
+      const sortedMeals = [...mealsData].sort((a, b) => a.price - b.price);
+      renderMeals(sortedMeals);
+    }
+
+    function sortMealsByName() {
+      const sortedMeals = [...mealsData].sort((a, b) => a.name.localeCompare(b.name));
+      renderMeals(sortedMeals);
+    }
+
+    fetch('/api/meals')
+      .then(response => response.json())
+      .then(data => {
+        mealsData = data;
+        renderMeals(mealsData);
+
+        sortSelect.addEventListener('change', function() {
+          const selectedValue = sortSelect.value;
+          if (selectedValue === 'all' || selectedValue === 'starter' || selectedValue === 'main-course' || selectedValue === 'chef-special' || selectedValue === 'dessert' || selectedValue === 'vegetarian') {
+            filterMealsByCategory(selectedValue);
+          } else if (selectedValue === 'price') {
+            sortMealsByPrice();
+          } else if (selectedValue === 'name') {
+            sortMealsByName();
+          }
+        });
+      });
+  });
+</script
