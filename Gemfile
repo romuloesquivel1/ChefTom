@@ -7,7 +7,7 @@ ruby "3.2.2"
 gem "rails", "~> 7.0.5"
 
 
-gem "bcrypt"
+gem 'devise'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

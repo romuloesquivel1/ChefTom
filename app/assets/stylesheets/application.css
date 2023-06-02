@@ -1,3 +1,8 @@
+h1 {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 50px;
+}
+
 .navbar {
     background-color: #808080;
     padding: 10px;
@@ -19,10 +24,163 @@
     text-decoration: none;
 }
 
-.website-content {
+.website-content, .menu-content {
 font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+        padding: 10px;
+    }
+
+.website-headings {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 50px;
+    text-align: center;
 }
 
-.website-headings, meal-name {
-    font-family: 'Mr Dafoe', cursive;
+.homepage-content {
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px; 
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+}
+
+.sort-dropdown{
+    text-align: center;
+}
+
+.menu-text-divclass {
+        background-color: white;
+            border: 1px dashed black;
+            border-radius: 25px;
+            box-shadow: 0 0 10px white;
+            margin: 60px;
+}
+
+.meal-item {
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+}
+
+.menu-list {
+    list-style-type: none;
+}
+
+  .meal-name {
+font-family: 'Dancing Script', cursive;
+font-size: 30px;
+ }
+
+ .feedback-buttons {
+    display: centre;
+    gap: 10px;
+    margin: 20px;
+ }
+
+ .like-button, .dislike-button {
+transition: background-color 0.3s ease;
+    background-color: #fff;
+        color: #000;
+        border-radius: 5px;
+    }
+ 
+          .like-button:hover {
+              background-color: green;
+              color: #fff;
+          }
+    
+          .dislike-button:hover {
+              background-color: red;
+              color: #fff;
+          }
+
+.about-container {
+    text-align: center;
+}
+
+.about {
+font-family: 'Montserrat', sans-serif;
+background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: justify;
+    padding: 10px;
+}
+.log-in {
+    font-size: 50px;
+    text-align: center;
+
+}
+.log-in-form {
+    background-color: white;
+        border: 1px dashed black;
+        border-radius: 25px;
+        box-shadow: 0 0 10px white;
+        margin: 60px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+        font-family: 'Montserrat', sans-serif;
+}
+.register {
+    font-size: 50px;
+    text-align: center;
+}
+
+.registration-form {
+        background-color: white;
+            border: 1px dashed black;
+            border-radius: 25px;
+            box-shadow: 0 0 10px white;
+            margin: 60px;
+            text-align: center;
+            padding: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .forgot-password {
+            text-align: center;
+            
+        }
+
+        .field {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .links {
+                        font-family: 'Montserrat', sans-serif;
+                        
+        }
+
+        .forgot-password-container {
+                    background-color: white;
+                        border: 1px dashed black;
+                        border-radius: 25px;
+                        box-shadow: 0 0 10px white;
+                        margin: 60px;
+        }
+
+        .profile-page-container {
+background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;   
+                font-family: 'Montserrat', sans-serif;
+}
+
+.profile-page-content {
+    text-align: center;
+}
+
+.sign-out-button {
+    list-style-type: none;
 }

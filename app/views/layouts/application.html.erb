@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mr+Dafoe&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat&family=Mr+Dafoe&display=swap" rel="stylesheet">
     <title>Chef Tom</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
@@ -34,17 +34,28 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item"><%= link_to "Home", root_path %></li>
-        <li class="navbar-item"><%= link_to "Menu", menu_path %></li>
-        <li class="navbar-item"><%= link_to "Make a Reservation", reservation_path %></li>
-        <li class="navbar-item"><%= link_to "My Bookings", mybookings_path %></li>
-        <li class="navbar-item"><%= link_to "About", about_path %></li>
-        <li class="navbar-item"><%= link_to "Login", login_path %></li>
-        <li class="navbar-item"><%= link_to "Register", register_path %></li>
-      </ul>
-    </nav>
+
+  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+<nav class="navbar">
+  <ul class="navbar-list">
+    <li class="navbar-item"><%= link_to "Home", root_path %></li>
+    <li class="navbar-item"><%= link_to "Menu", menu_path %></li>
+    <li class="navbar-item"><%= link_to "Make a Reservation", reservation_path %></li>
+    <li class="navbar-item"><%= link_to "About", about_path %></li>
+    <% if user_signed_in? %>
+      <li class="navbar-item"><%= link_to "Profile", profile_path %></li>
+    <% else %>
+      <li class="navbar-item"><%= link_to "Sign In", new_user_session_path %></li>
+      <li class="navbar-item"><%= link_to "Register", new_user_registration_path %></li>
+    <% end %>
+  </ul>
+</nav>
+
+
+
+
 
     <div class="image-container">
       <%= image_tag "https://i.imgur.com/T5eh6Et.png", alt: "Chef Tom Restaurant Logo" %>

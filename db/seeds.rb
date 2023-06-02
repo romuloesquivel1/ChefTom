@@ -217,10 +217,10 @@ Meal.create(
 )
 
 Meal.create(
-    name: 'Truffle-infused Lobster Risotto'
-    category: 'Chef Special'
-    description: 'Chef Tom throws the leftovers from over the last week into a pan and see what comes out!'
-    price: '32.99'
+    name: 'Truffle-infused Lobster Risotto',
+    category: 'Chef Special',
+    description: 'Chef Tom throws the leftovers from over the last week into a pan and see what comes out!',
+    price: 32.99
 )
 
 Meal.create(
