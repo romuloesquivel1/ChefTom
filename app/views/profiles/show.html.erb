@@ -4,16 +4,14 @@
     <p>Name: <%= @user.name %></p>
     <p>Email: <%= @user.email %></p>
     <div class="profile-page-meals">
-      <div class="likes">
-        <% @user.likes.each do |liked_meal| %>
-          <div class="liked-meal"><%= liked_meal.name %></div>
-        <% end %>
-      </div>
-      <div class="dislikes">
-        <% @user.dislikes.each do |disliked_meal| %>
-          <div class="disliked-meal"><%= disliked_meal.name %></div>
-        <% end %>
-      </div>
+      <h2>Liked Meals:</h2>
+      <% @user.likes.each do |liked_meal| %>
+        <div class="liked-meal"><%= liked_meal.name %></div>
+      <% end %>
+      <h2>Disliked Meals:</h2>
+      <% @user.dislikes.each do |disliked_meal| %>
+        <div class="disliked-meal"><%= disliked_meal.name %></div>
+      <% end %>
     </div>
   </div>
   <li class="sign-out-button">

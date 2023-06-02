@@ -11,11 +11,11 @@ Rails.application.routes.draw do
   # get 'sessions/destroy'
   get "about", to: "application#about"
   get "reservation", to: "application#reservation"
-  # get "menu", to: "application#menu"
-  get '/menu', to: 'application#menu', as: 'menu'
+  get "menu", to: "application#menu"
   
   get "mybookings", to: "application#mybookings"
   get '/profile', to: 'profiles#show', as: 'profile'
+get '/reservations', to: 'reservations#index', defaults: { format: 'json' }
 
 
   # Existing routes for your application
