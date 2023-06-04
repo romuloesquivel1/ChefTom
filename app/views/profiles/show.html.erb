@@ -14,11 +14,13 @@
       <% end %>
     </div>
   </div>
-  <li class="sign-out-button">
+  <li class="sign-out-button" style="margin-top: 20px;">
     <%= button_to(
       "Sign Out",
       destroy_user_session_path,
-      method: :delete
+      method: :delete,
+      class: "btn btn-danger",
+      id: "sign-out-button"
     ) %>
     <br>
   </li>

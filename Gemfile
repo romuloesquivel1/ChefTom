@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.5"
 
 gem "devise"
 
+gem 'bootstrap', '5.2.3'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
