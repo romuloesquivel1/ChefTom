@@ -11,12 +11,13 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'profiles#show', as: 'profile'
   get '/profile/edit', to: 'profiles#edit', as: 'edit_profile'
-  patch '/profile', to: 'profiles#update' # Add this line for the profile update route
-  delete 'profile/:id', to: 'profiles#destroy', as: :delete_profile
+  patch '/profile', to: 'profiles#update'
+  delete '/profile', to: 'profiles#destroy', as: 'delete_profile'
 
   devise_for :users
 
   root "application#home"
 
-  resources :bookings
+  resources :bookings, except: [:destroy]
+  delete 'bookings/:id', to: 'bookings#destroy', as: :delete_booking
 end

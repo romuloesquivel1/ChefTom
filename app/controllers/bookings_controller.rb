@@ -37,8 +37,9 @@ end
 def destroy
   @booking = Booking.find(params[:id])
   @booking.destroy
-  redirect_to bookings_path, notice: 'Booking was successfully deleted.'
+  redirect_to bookings_path, notice: 'Booking was successfully canceled.'
 end
+
 
 
   private
