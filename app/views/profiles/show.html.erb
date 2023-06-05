@@ -3,18 +3,7 @@
   <div class="profile-page-container">
     <p>Name: <%= @user.name %></p>
     <p>Email: <%= @user.email %></p>
-    <div class="profile-page-meals">
-      <h2>Liked Meals:</h2>
-      <% @user.likes.each do |liked_meal| %>
-        <div class="liked-meal"><%= liked_meal.name %></div>
-      <% end %>
-      <h2>Disliked Meals:</h2>
-      <% @user.dislikes.each do |disliked_meal| %>
-        <div class="disliked-meal"><%= disliked_meal.name %></div>
-      <% end %>
-    </div>
-  </div>
-  <li class="sign-out-button" style="margin-top: 20px;">
+      <li class="sign-out-button" style="margin-top: 20px;">
     <%= button_to(
       "Sign Out",
       destroy_user_session_path,

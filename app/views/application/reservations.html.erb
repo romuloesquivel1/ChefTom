@@ -1,0 +1,19 @@
+<h1>Reservation</h1>
+
+<div class="reservation">
+<%= form_with(model: @appointment, url: appointments_path) do |form| %>
+  <%= form.label :appointment_date, 'Date' %>
+  <%= form.date_field :appointment_date %>
+
+  <%= form.label :appointment_time, 'Time' %>
+  <%= form.time_field :appointment_time %>
+
+  <%= form.label :number_of_people, 'Number of People' %>
+  <%= form.number_field :number_of_people %>
+
+  <%= form.label :special_requests, 'Special Requests' %>
+  <%= form.text_area :special_requests %>
+
+  <%= form.submit 'Create Appointment' %>
+<% end %>
+</div>

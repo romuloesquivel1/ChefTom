@@ -9,6 +9,6 @@ class MenusController < ApplicationController
       user.dislikes << meal
     end
 
-    redirect_to user_profile_path(user) # Replace with the appropriate path to the user profile page
+    redirect_to user_profile_path(user) 
   end
 end

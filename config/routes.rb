@@ -3,33 +3,22 @@ Rails.application.routes.draw do
     resources :meals, only: [:index]
   end
 
-
-  # get 'users/new'
-  # get 'users/create'
-  # get 'sessions/new'
-  # get 'sessions/create'
-  # get 'sessions/destroy'
   get "about", to: "application#about"
   get "reservation", to: "application#reservation"
   get "menu", to: "application#menu"
   
   get "mybookings", to: "application#mybookings"
   get '/profile', to: 'profiles#show', as: 'profile'
-get '/reservations', to: 'reservations#index', defaults: { format: 'json' }
 
-
-  # Existing routes for your application
+  devise_for :users
 
   root "application#home"
- devise_for :users
-  # Routes for User registration and login/logout
-  # get "register", to: "users#new"
-  # post "register", to: "users#create"
 
-  # get "login", to: "sessions#new"
-  # post '/login', to: 'sessions#create'
-  # delete "logout", to: "sessions#destroy"
-
-  # resources :users
-
+  resources :bookings 
+  # do
+    # resources :times
+    # resources :dates 
+    # resources :number_of_people 
+    # resources :special_requests 
+  # end
 end

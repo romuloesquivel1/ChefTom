@@ -1,0 +1,15 @@
+<h1>Bookings</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li> 
+    <%= booking.date %>
+    <br>
+    <%= booking.number_of_people %>
+    <a href="<%= booking_path(booking) %>">
+    <br>
+    <%= booking.user.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

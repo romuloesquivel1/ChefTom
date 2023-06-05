@@ -3,36 +3,6 @@ h1 {
     font-size: 50px;
 }
 
-/* .navbar {
-    background-color: #808080;
-    padding: 10px;
-}
-
-.navbar-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.navbar-item {
-    margin-right: 20px;
-}
-
-.navbar-item a {
-    color: whitesmoke;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.navbar-item a:hover {
-    color: red;
-}
-
-.navbar-item a.active {
-    font-weight: bold;
-} */
-
 .navbar {
     background-color: #333;
     padding: 10px 0;
@@ -220,4 +190,53 @@ background-color: white;
 
 .sign-out-button {
     list-style-type: none;
+}
+
+.new-booking-content {
+    text-align: center;
+}
+
+.new-booking-form {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+.submit-new-booking input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+  .submit-new-booking input[type="submit"]:hover {
+      background-color: #45a049;
+  }
+
+.user-bookings-content {
+    text-align: center;
+}
+
+.user-bookings-form {
+    font-family: 'Montserrat', sans-serif;
+        background-color: white;
+        border: 1px dashed black;
+        border-radius: 25px;
+        box-shadow: 0 0 10px white;
+        margin: 60px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+            list-style-type: none;
 }
