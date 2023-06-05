@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
 
   validates :name, presence: true
-  validates :time, presence: true
-  validates :date, presence: true
-  validates :number_of_people, presence: true
-  validates :special_requests, presence: true, length: { maximum: 100 }
+  # validates :time, presence: true
+  # validates :date, presence: true
+  # validates :number_of_people, presence: true
+  # validates :special_requests, presence: true, length: { maximum: 100 }
 end

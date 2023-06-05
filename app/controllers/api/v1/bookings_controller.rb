@@ -1,3 +1,4 @@
+# DELETE THIS FILE I DONT THINK IT IS NEEDED 
 module Api
   module V1
     class BookingsController < ApplicationController

@@ -24,20 +24,22 @@ class BookingsController < ApplicationController
   end
 
   def edit
-  end
+end
 
-  def update
-    if @booking.update(booking_params)
-      redirect_to @booking, notice: 'Booking was successfully updated.'
-    else
-      render :edit
-    end
+def update
+  if @booking.update(booking_params)
+    redirect_to @booking, notice: 'Booking was successfully updated.'
+  else
+    render :edit
   end
+end
 
-  def destroy
-    @booking.destroy
-    redirect_to bookings_url, notice: 'Booking was successfully destroyed.'
-  end
+def destroy
+  @booking = Booking.find(params[:id])
+  @booking.destroy
+  redirect_to bookings_path, notice: 'Booking was successfully deleted.'
+end
+
 
   private
 

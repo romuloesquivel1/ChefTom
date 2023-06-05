@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     resources :meals, only: [:index]
+      resources :bookings
+        resources :users, only: [:show, :destroy]
+
+
   end
 
   get "about", to: "application#about"
@@ -9,6 +13,9 @@ Rails.application.routes.draw do
   
   get "mybookings", to: "application#mybookings"
   get '/profile', to: 'profiles#show', as: 'profile'
+
+  delete 'profile/:id', to: 'profiles#destroy', as: :delete_profile
+
 
   devise_for :users
 
