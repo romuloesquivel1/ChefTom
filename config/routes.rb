@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "reservation", to: "application#reservation"
   get "menu", to: "application#menu"
   get "mybookings", to: "application#mybookings"
+  get 'bookings/:id/edit', to: 'bookings#edit', as: 'edit_booking'
 
   get '/profile', to: 'profiles#show', as: 'profile'
   get '/profile/edit', to: 'profiles#edit', as: 'edit_profile'

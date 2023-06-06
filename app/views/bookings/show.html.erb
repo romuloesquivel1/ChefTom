@@ -4,13 +4,13 @@
   <div class="user-bookings-form">
     <h2>Customer Name: <%= @booking.user.name %> </h2>
     <h2>Contact Email: <%= @booking.user.email %> </h2>
-    <h2>Time: <%= @booking.time %></h2>
+    <h2>Time: <%= @booking.time.strftime("%H:%M") %></h2>
     <h2>Date: <%= @booking.date %></h2>
     <h2>Number of People: <%= @booking.number_of_people %></h2>
     <h2>Special Requests: <%= @booking.special_requests %></h2>
-<br>
-    <li><%= button_to "Edit Booking", edit_booking_path(@booking) %></li>
     <br>
-    <li><%= button_to "Cancel Booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" } %></li>
+    <%= link_to "Edit Booking", edit_booking_path(@booking) %>
+    <br>
+    <li><%= link_to "Cancel Booking", booking_path(@booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" } %></li>
   </div>
 </div>

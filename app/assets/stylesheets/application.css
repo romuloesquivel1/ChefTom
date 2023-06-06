@@ -189,6 +189,19 @@ background-color: white;
     text-align: center;
 }
 
+.profile-page-bookings {
+    font-family: 'Montserrat', sans-serif;
+        background-color: white;
+        border: 1px dashed black;
+        border-radius: 25px;
+        box-shadow: 0 0 10px white;
+        margin: 60px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+}
+
 .sign-out-button {
     list-style-type: none;
 }

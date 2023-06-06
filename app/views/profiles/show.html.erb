@@ -1,28 +1,43 @@
 <div class="profile-page-content">
   <h1><%= @user.name %>'s Profile</h1>
   <div class="profile-page-container">
-    <p>Name: <%= @user.name %></p>
-    <p>Email: <%= @user.email %></p>
-      <div class="profile-button-group">
-    <%= button_to(
-      "Sign Out",
-      destroy_user_session_path,
-      method: :delete,
-      class: "btn btn-danger",
-      id: "sign-out-button"
-    ) %>
-  <%= button_to(
-    "Delete Account",
-    delete_profile_path(@user),
-    method: :delete,
-    data: { confirm: "Are you sure you want to delete your account?" },
-    class: "btn btn-danger"
-  ) %>
-  <%= button_to "Edit Profile", edit_profile_path, method: :get, class: "btn btn-primary" %>
-</div>
-
-
+    <h2>Name: <%= @user.name %></h2>
     <br>
-  
-</div>
-</div>
+    <h2>Email: <%= @user.email %></h2>
+    <br>
+        <div class="profile-button-group">
+    <%= button_to "Edit Profile", edit_profile_path, method: :get, class: "btn btn-primary" %>
+    <%= button_to(
+        "Sign Out",
+        destroy_user_session_path,
+        method: :delete,
+        class: "btn btn-danger",
+        id: "sign-out-button"
+      ) %>
+      </div>
+    <br>
+    </div>
+    <div class="profile-page-bookings">
+    <h2>Bookings:</h2>
+    <% @user.bookings.each do |booking| %>
+      <div class="booking-item">
+        <h4>Time: <%= booking.time.strftime("%I:%M %p") %></h4>
+        <h4>Date: <%= booking.date %></h4>
+        <h4>Number of People: <%= booking.number_of_people %></h4>
+        <h4>Special Requests: <%= booking.special_requests %></h4>
+        <br>
+        <%= link_to "Edit Booking", edit_booking_path(booking) %>
+        <br>
+        <%= link_to "Cancel Booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" } %>
+      </div>
+      <br>
+        <% end %>
+    </div>
+         <%= button_to(
+        "Delete Account",
+        delete_profile_path(@user),
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete your account?" },
+        class: "btn btn-danger"
+      ) %>
+      </div>
