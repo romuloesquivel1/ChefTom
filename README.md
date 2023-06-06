@@ -1,5 +1,7 @@
 # README
 
+**CHEF TOM - Full-Stake Ruby on Rails Application**
+
 I have created a Ruby on Rails Full-Stack application, for a fictional website where a user can register an account and make a booking. 
 
 **The requirements for this project were as follows:**
@@ -93,3 +95,17 @@ For example, if we look at the Profiles Controller:
 •	The edit action finds the current user and assigns it to @user.
 •	The update action updates the attributes of the current user based on the provided parameters in `user_params`. If the update is successful, it redirects to the profile page. Otherwise, it renders the edit profile form again.
 •	The destroy action destroys the current user's account, signs out the user, and redirects to the root page.
+
+**WINS**
+
+Achieving user authentication and full CRUD for both models was a difficult but reqarding process, along with displaying the information on different pages. Managing to complete the application in full-stack Ruby was also great, considering the small window that it had been taught to me. 
+
+**DIFFICULTIES**
+
+Whilst I am also classing them as wins, getting user authentication to work was a long and painful experience, and required duel programming to incorporate the fundamentals into the application. 
+
+**WHAT'S NEX?**
+
+I have orfginally added an API in JavaScript that feautred meals on the menu, which would ultimately be fetched by a user and sorted by various categories (e.g. starter, price, etc).
+
+I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal couuld be featured on their profile page. I began to program all of this, include the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
