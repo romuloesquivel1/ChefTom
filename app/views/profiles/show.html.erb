@@ -3,7 +3,7 @@
   <div class="profile-page-container">
     <p>Name: <%= @user.name %></p>
     <p>Email: <%= @user.email %></p>
-      <li class="sign-out-button" style="margin-top: 20px;">
+      <div class="profile-button-group">
     <%= button_to(
       "Sign Out",
       destroy_user_session_path,
@@ -11,16 +11,18 @@
       class: "btn btn-danger",
       id: "sign-out-button"
     ) %>
-    </li>
-       <%= button_to(
-      "Delete Account",
-      delete_profile_path(@user),
-      method: :delete,
-      data: { confirm: "Are you sure you want to delete your account?" },
-      class: "btn btn-danger"
-    ) %>
-      <%= button_to "Edit Profile", edit_profile_path, method: :get, class: "btn btn-primary" %>
+  <%= button_to(
+    "Delete Account",
+    delete_profile_path(@user),
+    method: :delete,
+    data: { confirm: "Are you sure you want to delete your account?" },
+    class: "btn btn-danger"
+  ) %>
+  <%= button_to "Edit Profile", edit_profile_path, method: :get, class: "btn btn-primary" %>
+</div>
+
 
     <br>
   
+</div>
 </div>

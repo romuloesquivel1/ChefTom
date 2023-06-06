@@ -1,39 +1,38 @@
 <div class="new-booking-content">
-<h1>New Booking</h1>
-<div class="new-booking-form">
-<% if @booking.errors.any? %>
-  <% @booking.errors.full_messages.each do |message|%>\
-  <h3><%= message %> </h3>
-  <%end%>
-<%end%>
-</br>
-<%= form_with model: @booking do |form| %>
-  <div>
-    <%= form.label :date %><br>
-    <%= form.date_field :date %>
+  <h1>New Booking</h1>
+  <div class="new-booking-form">
+    <% if @booking.errors.any? %>
+      <% @booking.errors.full_messages.each do |message| %>
+        <h3><%= message %></h3>
+      <% end %>
+    <% end %>
+    </br>
+    <%= form_with model: @booking do |form| %>
+      <div>
+        <%= form.label :date %><br>
+        <%= form.date_field :date, required: true %>
+      </div>
+      <br>
+      <div>
+        <%= form.label :time %><br>
+        <%= form.time_field :time, required: true %>
+      </div>
+      <br>
+      <div>
+        <%= form.label :number_of_people %><br>
+        <%= form.number_field :number_of_people, required: true %>
+      </div>
+      <br>
+      <div>
+        <%= form.label :special_requests %><br>
+        <%= form.text_area :special_requests, required: true %>
+      </div>
+      <br>
+      <%= form.hidden_field :user_id, value: @current_user.id %>
+      <div class="submit-new-booking">
+        <%= form.submit %>
+      </div>
+      <br>
+    <% end %>
   </div>
-<br>
-  <div>
-    <%= form.label :time %><br>
-    <%= form.time_field :time %>
-  </div>
-<br>
-   <div>
-    <%= form.label :number_of_people %><br>
-    <%= form.number_field :number_of_people %>
-  </div>
-<br>
-   <div>
-    <%= form.label :special_requests %><br>
-    <%= form.text_area :special_requests %>
-  </div>
-<br>
-<%= form.hidden_field :user_id, value: @current_user.id %>
-
-  <div class="submit-new-booking">
-    <%= form.submit %>
-  </div>
-  <br>
-<% end %>
-</div>
 </div>

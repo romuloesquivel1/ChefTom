@@ -6,10 +6,10 @@
     <li> 
     <%= booking.date %>
     <br>
-    <%= booking.number_of_people %>
-    <a href="<%= booking_path(booking) %>">
+    <p>Guests: <%= booking.number_of_people %>
     <br>
-    <%= booking.user.name %>
+    Contact: <a href="<%= booking_path(booking) %>">
+    <%= booking.user.name %></p>
       </a>
     </li>
   <% end %>

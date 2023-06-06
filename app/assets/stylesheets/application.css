@@ -272,3 +272,43 @@ background-color: white;
         margin-right: 100px;
         list-style-type: none;
 }
+
+.profile-button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+                align-items: center;
+    
+}
+
+#sign-out-button {
+    background-color: green;
+    border: #45a049;
+}
+
+#sign-out-button:hover {
+        background-color: #3d8941;
+}
+
+.edit-profile-form {
+    font-family: 'Montserrat', sans-serif;
+        background-color: white;
+        border: 1px dashed black;
+        border-radius: 25px;
+        box-shadow: 0 0 10px white;
+        margin: 60px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+}
+
+.edit-button {
+        background-color: #45a049;
+        color: white;
+        border-radius: 5px;
+}
+
+.edit-button:hover {
+    background-color: #3d8941;
+}

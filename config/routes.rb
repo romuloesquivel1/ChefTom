@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   resources :bookings, except: [:destroy]
   delete 'bookings/:id', to: 'bookings#destroy', as: :delete_booking
+  match '*path', to: 'errors#render_404', via: :all
+
 end
