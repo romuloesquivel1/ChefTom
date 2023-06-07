@@ -11,18 +11,7 @@
       Chef Tom's menu is a testament to our commitment to providing a memorable dining experience. We invite you to explore our culinary offerings and embark on a gastronomic adventure that will leave you craving for more. Bon appétit!
     </p>
   </div>
-  <div id="sort-dropdown" class="sort-dropdown">
-    <label for="sort-select">Sort by:</label>
-    <select id="sort-select">
-      <option value="all">All</option>
-      <option value="starter">Starter</option>
-      <option value="main-course">Main Course</option>
-      <option value="chef-special">Chef Special</option>
-      <option value="dessert">Dessert</option>
-      <option value="vegetarian">Vegetarian</option>
-    </select>
-    <button id="reveal-button" style="display: none;">Reveal Selected Meals</button>
-  </div>
+ 
   <ul id="menu-list" class="menu-list">
     <!-- Meals will be dynamically populated here -->
   </ul>
@@ -46,10 +35,6 @@
             <p>${meal.description}</p>
             <p>${meal.category}</p>
             <p>£${meal.price}</p>
-            <div class="feedback-buttons">
-              <button class="like-button" data-meal-id="${meal.id}">Like</button>
-              <button class="dislike-button" data-meal-id="${meal.id}">Dislike</button>
-            </div>
           `;
           menuList.appendChild(listItem);
         });
