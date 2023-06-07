@@ -31,6 +31,7 @@ class ApplicationController < ActionController::Base
   end
 
   def home
+    redirect_to root_path
   end
 
   def render_404

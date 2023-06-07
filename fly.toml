@@ -1,0 +1,17 @@
+# fly.toml app configuration file generated for chef-tom on 2023-06-07T10:04:47+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "chef-tom"
+primary_region = "lhr"
+
+[build]
+  image = "flyio/hellofly:latest"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
