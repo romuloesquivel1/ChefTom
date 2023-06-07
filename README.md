@@ -109,3 +109,4 @@ Whilst I am also classing them as wins, getting user authentication to work was 
 I have orfginally added an API in JavaScript that feautred meals on the menu, which would ultimately be fetched by a user and sorted by various categories (e.g. starter, price, etc).
 
 I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal couuld be featured on their profile page. I began to program all of this, include the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
+I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal couuld be featured on their profile page. I began to program all of this, include the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
