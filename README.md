@@ -37,6 +37,11 @@ Users must be able to fill out all requirements for their booking to be successf
 USers must be able to navigate successfully through the application
 
 **Wireframe**
+<img width="1131" alt="wireframe1" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/0e132db2-a311-4411-8838-8abe6f233abc">
+
+<img width="558" alt="wireframe2" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/ebf4a881-f859-42ae-885e-532ed7c6d21d">
+
+<img width="654" alt="wireframe3" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/5976d8ab-5179-4834-9429-d10645ba124a">
 
 
 **USER and BOOKING MODELS**
