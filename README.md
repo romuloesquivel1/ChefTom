@@ -1,10 +1,13 @@
 # README
 
-**CHEF TOM - Full-Stake Ruby on Rails Application**
+**CHEF TOM - Full-Stack Ruby on Rails Application**
 
-I have created a Ruby on Rails Full-Stack application, for a fictional website where a user can register an account and make a booking. 
+I have created a Ruby on Rails Full-Stack application, for a fictional website where a user can register an account and make a booking. This process took a little over a week, and was worked on by myself. I did have a little help in getting the User Authentication to fully work properly, but the rest was completed by myself. 
+
+Deployed project link: TO BE ADDED
 
 **The requirements for this project were as follows:**
+
 Build a full stack web application. Must be your own work.
 Select a Project Idea of your own.
 Have at least 2 models (more if it makes sense)
@@ -33,15 +36,17 @@ Users can delete their account
 Users can create a booking
 Users can edit their booking 
 Users can delete their booking
-Users must be able to fill out all requirements for their booking to be successfull
+Users must be able to fill out all requirements for their booking to be successful
 USers must be able to navigate successfully through the application
 
 **Wireframe**
-<img width="1131" alt="wireframe1" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/0e132db2-a311-4411-8838-8abe6f233abc">
 
-<img width="558" alt="wireframe2" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/ebf4a881-f859-42ae-885e-532ed7c6d21d">
+**Planning**
+To first get inspiration, I visited a number of restaurant’s websites to see how they managed their booking system and general layout. From there, I began to sketch out what I thought would be a very user friendly experience.
 
-<img width="654" alt="wireframe3" src="https://github.com/tomtenniscourt/ChefTom/assets/127535435/5976d8ab-5179-4834-9429-d10645ba124a">
+Like with most of my projects, my first coding job was to create a navigation bar and associated pages. From there, I could fill them with the HTML and CSS code that would give it the right look. After that, I ensured that the backend server was in place and that it featured user authentication, and finished with the overall booking model. 
+
+Between the last two steps, I did try to include another API of my own creation that would generate the restaurant’s menu (and give the user the option to sort through each item based on a number of different options) but ultimately decided to focus on the booking model and user authentication. 
 
 
 **USER and BOOKING MODELS**
@@ -75,7 +80,7 @@ devise/sessions/new.html.erb:
 
 devise/profiles/show.html.erb:
 •	Showcases the user's profile page with their name and email.
-•	I include buttons to edit the profile, sign out, delete, and manage a users bookings in order to achieve full CRUD.
+•	I include buttons to edit the profile, sign out, delete, and manage a user's bookings in order to achieve full CRUD.
 
 
 **BOOKING SYSTEM**
@@ -103,16 +108,20 @@ For example, if we look at the Profiles Controller:
 
 **WINS**
 
-Achieving user authentication and full CRUD for both models was a difficult but reqarding process, along with displaying the information on different pages. Managing to complete the application in full-stack Ruby was also great, considering the small window that it had been taught to me. 
+Achieving user authentication and full CRUD for both models was a difficult but rewarding process, along with displaying the information on different pages. Managing to complete the application in full-stack Ruby was also great, considering the small window that it had been taught to me. 
 
 **DIFFICULTIES**
 
-Whilst I am also classing them as wins, getting user authentication to work was a long and painful experience, and required duel programming to incorporate the fundamentals into the application. 
+Whilst I am also classing them as wins, getting user authentication to work was a long and painful experience, and required dual programming to incorporate the fundamentals into the application. 
 
-**WHAT'S NEX?**
+**WHAT'S NEXT?**
 
-I had originally added an API in JavaScript that feautred meals on the menu, which would ultimately be fetched by a user and sorted by various categories (e.g. starter, price, etc).
+I had originally added an API in JavaScript that featured meals on the menu, which would ultimately be fetched by a user and sorted by various categories (e.g. starter, price, etc).
 
-I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal couuld be featured on their profile page. I began to program all of this, including the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
+I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal could be featured on their profile page. I began to program all of this, including the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
 
-I also wanted to add a feature whereby a user could either like or dislike a meal, and then the meal couuld be featured on their profile page. I began to program all of this, include the inclusion of lie and dislike buttons, however was unable to complete this within the time frame, and as such will work on this after the course has ended. 
+**KEY LEARNINGS**
+
+The biggest lessons learnt here really fall into two categories - User Authentication and Ruby on Rails. I was writing this application after only starting learning Ruby a few weeks prior, so I made a few silly mistakes in the early stages - such as confusing some aspects with JavaScript. I even began writing an entire JavaScript file before realising the error of my ways. Ultimately though, the entire process was good experience in coding in an entirely new language, and I probably now find it to be easier than JavaScript. 
+
+The User Authentication was also a good learning experience, and one that I hope to bring to whatever challenge I face next. 
