@@ -255,5 +255,6 @@ end
 
 create_meals
 
-uu = User.new(name: 'Admin', email: 'admin@local.test', password: 'admin@123')
-uu.save
+user = User.find_or_initialize_by(name: 'Admin', email: 'admin@local.test')
+user.password = 'admin@123'
+user.save

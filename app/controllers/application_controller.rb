@@ -18,24 +18,17 @@ class ApplicationController < ActionController::Base
     # @name = "Tom"
   end
 
-  def reservation
-  end
+  def reservation; end
 
-  def mybookings
-  end
+  def mybookings; end
 
-  def login
-  end
-
-  def register
-  end
+  def register; end
 
   def home
     redirect_to root_path
   end
 
   def render_404
-  render file: "#{Rails.root}/public/404.html", status: :not_found
-end
-
+    render file: "#{Rails.root}/public/404.html", status: :not_found
+  end
 end

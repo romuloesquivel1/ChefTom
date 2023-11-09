@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categories</h1>
+
+<div class="card-group">
+  <% @categories.each do |category| %>
+    <div class="card mx-2 rounded p-3">
+      <%= render category %>
+      <div class="card-body">
+        <%= link_to "Show this category", category, class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path %>

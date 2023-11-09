@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   namespace :api do
     resources :meals, only: [:index]
     resources :bookings

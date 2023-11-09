@@ -31,14 +31,14 @@ h1 {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: red;
-    font-weight: bold;
 }
 
-.website-content, .menu-content {
-font-family: 'Montserrat', sans-serif;
+.website-content,
+.menu-content {
+    font-family: 'Montserrat', sans-serif;
     text-align: justify;
-        padding: 10px;
-    }
+    padding: 10px;
+}
 
 .website-headings {
     font-family: 'Mr Dafoe', cursive;
@@ -49,21 +49,21 @@ font-family: 'Montserrat', sans-serif;
 .homepage-content {
     background-color: white;
     border: 1px dashed black;
-    border-radius: 25px; 
+    border-radius: 25px;
     box-shadow: 0 0 10px white;
     margin: 60px;
 }
 
-.sort-dropdown{
+.sort-dropdown {
     text-align: center;
 }
 
 .menu-text-divclass {
-        background-color: white;
-            border: 1px dashed black;
-            border-radius: 25px;
-            box-shadow: 0 0 10px white;
-            margin: 60px;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
 }
 
 .meal-item {
@@ -79,41 +79,42 @@ font-family: 'Montserrat', sans-serif;
     list-style-type: none;
 }
 
-  .meal-name {
-font-family: 'Dancing Script', cursive;
-font-size: 30px;
- }
+.meal-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
 
- .feedback-buttons {
+.feedback-buttons {
     display: centre;
     gap: 10px;
     margin: 20px;
- }
+}
 
- .like-button, .dislike-button {
-transition: background-color 0.3s ease;
+.like-button,
+.dislike-button {
+    transition: background-color 0.3s ease;
     background-color: #fff;
-        color: #000;
-        border-radius: 5px;
-    }
- 
-          .like-button:hover {
-              background-color: green;
-              color: #fff;
-          }
-    
-          .dislike-button:hover {
-              background-color: red;
-              color: #fff;
-          }
+    color: #000;
+    border-radius: 5px;
+}
+
+.like-button:hover {
+    background-color: green;
+    color: #fff;
+}
+
+.dislike-button:hover {
+    background-color: red;
+    color: #fff;
+}
 
 .about-container {
     text-align: center;
 }
 
 .about {
-font-family: 'Montserrat', sans-serif;
-background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
     border: 1px dashed black;
     border-radius: 25px;
     box-shadow: 0 0 10px white;
@@ -121,70 +122,56 @@ background-color: white;
     text-align: justify;
     padding: 10px;
 }
+
 .log-in {
     font-size: 50px;
     text-align: center;
 
 }
-.log-in-form {
-    background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
-        font-family: 'Montserrat', sans-serif;
-}
+
 .register {
     font-size: 50px;
     text-align: center;
 }
 
-.registration-form {
-        background-color: white;
-            border: 1px dashed black;
-            border-radius: 25px;
-            box-shadow: 0 0 10px white;
-            margin: 60px;
-            text-align: center;
-            padding: 10px;
-            margin-left: 100px;
-            margin-right: 100px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .forgot-password {
-            text-align: center;
-            
-        }
-
-        .field {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .links {
-                        font-family: 'Montserrat', sans-serif;
-                        
-        }
-
-        .forgot-password-container {
-                    background-color: white;
-                        border: 1px dashed black;
-                        border-radius: 25px;
-                        box-shadow: 0 0 10px white;
-                        margin: 60px;
-        }
-
-        .profile-page-container {
-background-color: white;
+.devise-form {
+    background-color: white;
     border: 1px dashed black;
     border-radius: 25px;
     box-shadow: 0 0 10px white;
-    margin: 60px;   
-                font-family: 'Montserrat', sans-serif;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.field {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.links {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.forgot-password-container {
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+}
+
+.profile-page-container {
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .profile-page-content {
@@ -193,15 +180,15 @@ background-color: white;
 
 .profile-page-bookings {
     font-family: 'Montserrat', sans-serif;
-        background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .sign-out-button {
@@ -226,7 +213,8 @@ background-color: white;
 }
 
 
-.submit-new-booking input[type="submit"], .update-booking input[type="submit"] {
+.submit-new-booking input[type="submit"],
+.update-booking input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -235,65 +223,65 @@ background-color: white;
     border-radius: 5px;
 }
 
-  .submit-new-booking input[type="submit"]:hover {
-      background-color: #45a049;
-  }
+.submit-new-booking input[type="submit"]:hover {
+    background-color: #45a049;
+}
 
 .update-booking input[type="submit"]:hover {
     background-color: #45a049;
 }
-    
+
 .user-bookings-content {
     text-align: center;
 }
 
 .user-bookings-form {
     font-family: 'Montserrat', sans-serif;
-        background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
-            list-style-type: none;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    list-style-type: none;
 }
 
 .edit-booking-form {
     font-family: 'Montserrat', sans-serif;
-        background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .all-bookings {
     font-family: 'Montserrat', sans-serif;
-        background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
-        list-style-type: none;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    list-style-type: none;
 }
 
 .profile-button-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-                align-items: center;
-    
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #sign-out-button {
@@ -302,26 +290,26 @@ background-color: white;
 }
 
 #sign-out-button:hover {
-        background-color: #3d8941;
+    background-color: #3d8941;
 }
 
 .edit-profile-form {
     font-family: 'Montserrat', sans-serif;
-        background-color: white;
-        border: 1px dashed black;
-        border-radius: 25px;
-        box-shadow: 0 0 10px white;
-        margin: 60px;
-        text-align: center;
-        padding: 10px;
-        margin-left: 100px;
-        margin-right: 100px;
+    background-color: white;
+    border: 1px dashed black;
+    border-radius: 25px;
+    box-shadow: 0 0 10px white;
+    margin: 60px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .edit-button {
-        background-color: #45a049;
-        color: white;
-        border-radius: 5px;
+    background-color: #45a049;
+    color: white;
+    border-radius: 5px;
 }
 
 .edit-button:hover {
