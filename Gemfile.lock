@@ -246,25 +246,22 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap (= 5.2.3)
+  bootstrap
   capybara
   debug
   devise
   importmap-rails
   jbuilder
-  puma (~> 5.0)
+  puma
   rails (~> 7.0.5)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   tzinfo-data
   web-console
   webdrivers
-
-RUBY VERSION
-   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.13

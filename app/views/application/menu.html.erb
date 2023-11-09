@@ -16,7 +16,7 @@
     <!-- Meals will be dynamically populated here -->
   </ul>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document_ready(function() {
       const menuList = document.getElementById('menu-list');
       const sortSelect = document.getElementById('sort-select');
       const revealButton = document.getElementById('reveal-button');
@@ -100,12 +100,8 @@
         }
       }
 
-      fetch('/api/meals')
-        .then(response => response.json())
-        .then(data => {
-          mealsData = data;
-          renderMeals(mealsData);
-
+      function addEventHandle() {
+        if (sortSelect) {
           sortSelect.addEventListener('change', function() {
             const selectedValue = sortSelect.value;
             if (selectedValue === 'all' || selectedValue === 'starter' || selectedValue === 'main-course' || selectedValue === 'chef-special' || selectedValue === 'dessert' || selectedValue === 'vegetarian') {
@@ -116,18 +112,28 @@
               sortMealsByName();
             }
           });
+        }
 
-          // Event delegation for like and dislike buttons
-          menuList.addEventListener('click', function(event) {
-            if (event.target.classList.contains('like-button')) {
-              const mealId = event.target.dataset.mealId;
-              handleLike(parseInt(mealId));
-            } else if (event.target.classList.contains('dislike-button')) {
-              const mealId = event.target.dataset.mealId;
-              handleDislike(parseInt(mealId));
-            }
-          });
+        // Event delegation for like and dislike buttons
+        menuList.addEventListener('click', function(event) {
+          if (event.target.classList.contains('like-button')) {
+            const mealId = event.target.dataset.mealId;
+            handleLike(parseInt(mealId));
+          } else if (event.target.classList.contains('dislike-button')) {
+            const mealId = event.target.dataset.mealId;
+            handleDislike(parseInt(mealId));
+          }
         });
+      }
+
+      fetch('/api/meals')
+        .then(response => response.json())
+        .then(data => {
+          mealsData = data;
+          renderMeals(mealsData);
+        });
+
+      addEventHandle();
     });
   </script>
 </div>
