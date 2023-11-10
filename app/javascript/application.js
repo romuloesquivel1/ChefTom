@@ -3,8 +3,9 @@ import '@popperjs/core'
 import 'bootstrap'
 import '@hotwired/turbo-rails'
 import 'controllers'
+import 'menu'
 
-window.document_ready = function (fn) {
+window.documentReady = function (fn) {
   if (document.readyState !== 'loading') {
     fn();
     return;

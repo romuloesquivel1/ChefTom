@@ -11,148 +11,34 @@
       Chef Tom's menu is a testament to our commitment to providing a memorable dining experience. We invite you to explore our culinary offerings and embark on a gastronomic adventure that will leave you craving for more. Bon appétit!
     </p>
   </div>
- 
+
   <ul id="menu-list" class="menu-list">
     <!-- Meals will be dynamically populated here -->
   </ul>
-  <script>
-    var wait = ms => (new Promise(r => setTimeout(r, ms)));
+</div>
 
-    var retryOperation = (operation, delay, retries) => (new Promise((resolve, reject) => {
-      if (window[operation]) {
-        return resolve();
-      }
+<script>
+var wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
-      return wait(delay)
-              .then(retryOperation.bind(null, operation, delay, retries - 1))
-              .then(resolve)
-              .catch(reject);
-    }));
-
-    function init() {
-      const menuList = document.getElementById('menu-list');
-      const sortSelect = document.getElementById('sort-select');
-      const revealButton = document.getElementById('reveal-button');
-      let mealsData = [];
-      let userLikes = [];
-      let userDislikes = [];
-
-      function renderMeals(meals) {
-        menuList.innerHTML = '';
-        meals.forEach(meal => {
-          const listItem = document.createElement('li');
-          listItem.classList.add('meal-item'); // Add the class 'meal-item' to each list item
-
-          listItem.innerHTML = `
-            <h2 class='meal-name'>${meal.name}</h2>
-            <p>${meal.description}</p>
-            <p>${meal.category.name}</p>
-            <p>£${meal.price}</p>
-          `;
-          menuList.appendChild(listItem);
-        });
-      }
-
-      function filterMealsByCategory(selectedCategory) {
-        let filteredMeals = [];
-
-        if (selectedCategory === 'all') {
-          filteredMeals = [...mealsData].sort((a, b) => a.price - b.price);
-        } else {
-          filteredMeals = mealsData.filter(meal => meal.category.toLowerCase() === selectedCategory);
-        }
-
-        renderMeals(filteredMeals);
-      }
-
-      function sortMealsByPrice() {
-        const sortedMeals = [...mealsData].sort((a, b) => a.price - b.price);
-        renderMeals(sortedMeals);
-      }
-
-      function sortMealsByName() {
-        const sortedMeals = [...mealsData].sort((a, b) => a.name.localeCompare(b.name));
-        renderMeals(sortedMeals);
-      }
-
-      function updateLikesDislikes() {
-        const likesContainer = document.querySelector('.likes');
-        const dislikesContainer = document.querySelector('.dislikes');
-
-        likesContainer.innerHTML = '';
-        dislikesContainer.innerHTML = '';
-
-        userLikes.forEach(likedMeal => {
-          const likedItem = document.createElement('div');
-          likedItem.classList.add('liked-meal');
-          likedItem.innerText = likedMeal.name;
-          likesContainer.appendChild(likedItem);
-        });
-
-        userDislikes.forEach(dislikedMeal => {
-          const dislikedItem = document.createElement('div');
-          dislikedItem.classList.add('disliked-meal');
-          dislikedItem.innerText = dislikedMeal.name;
-          dislikesContainer.appendChild(dislikedItem);
-        });
-      }
-
-      function handleLike(mealId) {
-        const likedMeal = mealsData.find(meal => meal.id === mealId);
-        if (likedMeal) {
-          userLikes.push(likedMeal);
-          updateLikesDislikes();
-        }
-      }
-
-      function handleDislike(mealId) {
-        const dislikedMeal = mealsData.find(meal => meal.id === mealId);
-        if (dislikedMeal) {
-          userDislikes.push(dislikedMeal);
-          updateLikesDislikes();
-        }
-      }
-
-      function addEventHandle() {
-        if (sortSelect) {
-          sortSelect.addEventListener('change', function() {
-            const selectedValue = sortSelect.value;
-            if (selectedValue === 'all' || selectedValue === 'starter' || selectedValue === 'main-course' || selectedValue === 'chef-special' || selectedValue === 'dessert' || selectedValue === 'vegetarian') {
-              filterMealsByCategory(selectedValue);
-            } else if (selectedValue === 'price') {
-              sortMealsByPrice();
-            } else if (selectedValue === 'name') {
-              sortMealsByName();
-            }
-          });
-        }
-
-        // Event delegation for like and dislike buttons
-        menuList.addEventListener('click', function(event) {
-          if (event.target.classList.contains('like-button')) {
-            const mealId = event.target.dataset.mealId;
-            handleLike(parseInt(mealId));
-          } else if (event.target.classList.contains('dislike-button')) {
-            const mealId = event.target.dataset.mealId;
-            handleDislike(parseInt(mealId));
-          }
-        });
-      }
-
-      fetch('/api/meals')
-        .then(response => response.json())
-        .then(data => {
-          mealsData = data;
-          renderMeals(mealsData);
-        });
-
-      addEventHandle();
+var retryOperation = (operation, delay, retries) =>
+  new Promise((resolve, reject) => {
+    if (window[operation]) {
+      return resolve();
     }
 
-    retryOperation('document_ready', 100, 10).then(() => {
-      document_ready(init);
-    }).catch((ex) => {
-      console.log('document ready failed', ex);
-    })
-  </script>
-</div>
+    return wait(delay)
+      .then(retryOperation.bind(null, operation, delay, retries - 1))
+      .then(resolve)
+      .catch(reject);
+});
+
+retryOperation('documentReady', 100, 10)
+  .then(() => {
+    documentReady(() => {
+      (new Menu(document.getElementById('menu-list'))).init();
+    });
+  })
+  .catch((ex) => {
+    console.log('document ready failed', ex);
+  });
+</script>
