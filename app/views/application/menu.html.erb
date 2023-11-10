@@ -1,20 +1,46 @@
 <h1 class='website-headings'>Menu</h1>
-<div class="menu-content">
-  <div class="menu-text-divclass">
-    <p class='website-content'>
-      Our menu is a reflection of Chef Tom's passion for creating exquisite dishes that combine flavors, textures, and presentation to deliver an unforgettable dining experience.
-      <br>
-      <br>
-      At Chef Tom's, we take pride in offering a diverse selection of dishes inspired by global cuisine, curated with the finest ingredients and expert culinary techniques. Whether you're a fan of indulgent starters, savory main courses, tantalizing chef specials, delectable desserts, or wholesome vegetarian options, our menu has something to satisfy every palate.
-      <br>
-      <br>
-      Chef Tom's menu is a testament to our commitment to providing a memorable dining experience. We invite you to explore our culinary offerings and embark on a gastronomic adventure that will leave you craving for more. Bon appétit!
-    </p>
-  </div>
 
-  <ul id="menu-list" class="menu-list">
-    <!-- Meals will be dynamically populated here -->
-  </ul>
+<div class='mx-4'>
+  <div class="menu-content">
+    <div class="menu-text-divclass">
+      <p class='website-content'>
+        Our menu is a reflection of Chef Tom's passion for creating exquisite dishes that combine flavors, textures, and presentation to deliver an unforgettable dining experience.
+        <br>
+        <br>
+        At Chef Tom's, we take pride in offering a diverse selection of dishes inspired by global cuisine, curated with the finest ingredients and expert culinary techniques. Whether you're a fan of indulgent starters, savory main courses, tantalizing chef specials, delectable desserts, or wholesome vegetarian options, our menu has something to satisfy every palate.
+        <br>
+        <br>
+        Chef Tom's menu is a testament to our commitment to providing a memorable dining experience. We invite you to explore our culinary offerings and embark on a gastronomic adventure that will leave you craving for more. Bon appétit!
+      </p>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+
+        <div class="input-group mb-3">
+          <select class="form-select" id='select-category' aria-label="Filter Category">
+            <option selected>Open this select menu</option>
+          </select>
+        </div>
+
+      </div>
+      <div class='col'>
+
+        <div class="input-group mb-3">
+          <select class="form-select" id='select-sort' aria-label="Sort Meals">
+            <option selected>Sort by</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <ul id="menu-list" class="menu-list p-0">
+      <!-- Meals will be dynamically populated here -->
+    </ul>
+  </div>
 </div>
 
 <script>
