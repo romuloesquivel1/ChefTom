@@ -1,6 +1,6 @@
 class Api::MealsController < ApplicationController
   def index
-    @meals = Meal.all
-    render json: @meals, only: [:name, :category, :description, :price]
+    @meals = Meal.includes(:category).all
+    render json: @meals, include: { category: { only: [:name] } }, only: [:name, :description, :price]
   end
 end

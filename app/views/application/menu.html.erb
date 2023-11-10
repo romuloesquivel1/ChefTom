@@ -46,7 +46,7 @@
           listItem.innerHTML = `
             <h2 class='meal-name'>${meal.name}</h2>
             <p>${meal.description}</p>
-            <p>${meal.category}</p>
+            <p>${meal.category.name}</p>
             <p>£${meal.price}</p>
           `;
           menuList.appendChild(listItem);

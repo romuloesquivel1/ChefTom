@@ -2,15 +2,22 @@
 
 <h1>Categories</h1>
 
-<div class="card-group">
-  <% @categories.each do |category| %>
-    <div class="card mx-2 rounded p-3">
-      <%= render category %>
-      <div class="card-body">
-        <%= link_to "Show this category", category, class: "btn btn-primary" %>
+<div class="card-group mx-3">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <% @categories.each do |category| %>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-header">
+            <%= category.name %>
+          </div>
+          <div class="card-body">
+            <p><%= category.description %></p>
+            <%= link_to "Show this category", category, class: "btn btn-primary" %>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <%= link_to "New category", new_category_path %>
